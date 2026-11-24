@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah · Onychinus Farm</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <!-- ===== TOPO ===== -->
+    <header class="topo">
+        <p class="etiqueta">Diário de fazenda</p>
+        <h1>Sarah <span>· Fazendeira nível 25</span></h1>
+        <p class="subtitulo">Dona da <strong>Onychinus Farm</strong>, em Stardew Valley.</p>
+
+        <!-- Botão do interruptor: troca entre dia e noite -->
+        <button id="botaoTema" class="botao">🌙 Virar noite</button>
+        <p id="mensagemTema" class="mensagem-tema">Bom dia, fazenda! O galo já cantou.</p>
+    </header>
+
+    <main>
+
+        <!-- ===== PERFIL ===== -->
+        <section class="caixa">
+            <h2>Quem é a Sarah</h2>
+            <div class="duas-colunas">
+                <div>
+                    <p>Fazendeira de chapéu de palha e macacão roxo. Já maximizou todas as habilidades do vale e agora vive cuidando dos bichos, da família e do dinheiro (muito dinheiro).</p>
+                    <ul class="lista-numeros">
+                        <li><strong>10</strong> Agricultura</li>
+                        <li><strong>10</strong> Mineração</li>
+                        <li><strong>10</strong> Coleta</li>
+                        <li><strong>10</strong> Pesca</li>
+                        <li><strong>10</strong> Combate</li>
+                        <li><strong>5</strong> Maestria</li>
+                    </ul>
+                    <p class="destaque">💰 2.211.817g no bolso · 5.792.084g ganhos no total</p>
+                </div>
+                <img src="img/perfil.jpg" alt="Tela de habilidades da Sarah, todas no nível 10">
+            </div>
+        </section>
+
+        <!-- ===== ONDE MORA ===== -->
+        <section class="caixa">
+            <h2>Onde eu moro</h2>
+            <div class="duas-colunas">
+                <img src="img/mapa.jpg" alt="Mapa do vale com a Onychinus Farm">
+                <div>
+                    <p>A <strong>Onychinus Farm</strong> fica a oeste de Pelican Town, colada na floresta Cindersap e no rancho da Marnie.</p>
+                    <p>A casa já está no <strong>nível 4</strong>, com espaço para o marido, os dois filhos e a gata.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FAMÍLIA ===== -->
+        <section class="caixa">
+            <h2>Minha família</h2>
+            <div class="cartoes">
+                <div class="cartao">
+                    <p class="cartao-titulo">Sebastian</p>
+                    <p>Marido · 14 ❤</p>
+                </div>
+                <div class="cartao">
+                    <p class="cartao-titulo">Sasuke</p>
+                    <p>Filho · 5 ❤</p>
+                </div>
+                <div class="cartao">
+                    <p class="cartao-titulo">MeiMei</p>
+                    <p>Filha · 1 ❤</p>
+                </div>
+                <div class="cartao">
+                    <p class="cartao-titulo">kitty</p>
+                    <p>Gata · 5 ❤</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== AMIZADES (montada pelo JavaScript) ===== -->
+        <section class="caixa">
+            <h2>Amizades</h2>
+            <p>Os corações que eu tenho com cada morador do vale (o máximo é 10).</p>
+            <ul id="listaAmigos" class="lista-coracoes"></ul>
+        </section>
+
+        <!-- ===== JOGO: CAMPO COM VALIDAÇÃO ===== -->
+        <section class="caixa jogo">
+            <h2>Adivinhe os corações</h2>
+            <p>Escolha um morador e chute quantos corações eu tenho com ele.</p>
+
+            <div class="formulario">
+                <label for="escolhaAmigo">Morador</label>
+                <select id="escolhaAmigo"></select>
+
+                <label for="campoChute">Seu chute</label>
+                <input type="text" id="campoChute" placeholder="Ex.: 7">
+
+                <button id="botaoChutar" class="botao">Chutar</button>
+            </div>
+
+            <p id="resultado" class="resultado"></p>
+            <p id="placar" class="placar"></p>
+        </section>
+
+        <!-- ===== ANIMAIS (montada pelo JavaScript) ===== -->
+        <section class="caixa">
+            <h2>Meus animais</h2>
+            <p id="resumoAnimais"></p>
+            <div class="filtros">
+                <button class="botao pequeno" id="botaoTodos">Todos</button>
+                <button class="botao pequeno" id="botaoFelizes">Só os mais felizes</button>
+            </div>
+            <ul id="listaAnimais" class="grade-animais"></ul>
+        </section>
+
+        <!-- ===== CONQUISTAS ===== -->
+        <section class="caixa">
+            <h2>Conquistas</h2>
+            <div class="duas-colunas">
+                <ul class="lista-conquistas">
+                    <li>⭐ Todas as 5 habilidades no nível 10</li>
+                    <li>⭐ 5 maestrias liberadas</li>
+                    <li>⭐ Centro Comunitário restaurado</li>
+                    <li>⭐ Casada com o Sebastian, com dois filhos</li>
+                    <li>⭐ Magia da Floresta</li>
+                    <li>⭐ Mais de 20 livros de poder lidos</li>
+                    <li>⭐ 15 nozes douradas encontradas</li>
+                    <li>⭐ Mais de 5 milhões de ouro ganhos</li>
+                </ul>
+                <img src="img/conquistas.jpg" alt="Tela de itens especiais e livros da Sarah">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+        <p>Feito por Sarah · Programação Web com JavaScript · Senac DF</p>
+    </footer>
+
+    <!-- O script fica no fim do body para os elementos já existirem quando ele rodar -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+/* ===== Cores do modo dia ===== */
+body {
+    --fundo: #a8d8ea;
+    --papel: #fbe7b5;
+    --borda: #8a4b1f;
+    --texto: #3b2412;
+    --destaque: #c2410c;
+    --coracao: #d62828;
+
+    margin: 0;
+    font-family: "Nunito", sans-serif;
+    color: var(--texto);
+    background: linear-gradient(#87c8e6, #cdebc0 70%, #8cc46a);
+    background-attachment: fixed;
+    transition: background 0.4s;
+}
+
+/* ===== Cores do modo noite (o JavaScript coloca a classe "noite" no body) ===== */
+body.noite {
+    --papel: #2b2a4c;
+    --borda: #b18ae6;
+    --texto: #f1e9ff;
+    --destaque: #ffd166;
+    --coracao: #ff6b8a;
+
+    background: radial-gradient(circle at 80% 10%, #3b3a78, #14132b 60%);
+    background-attachment: fixed;
+}
+
+/* ===== Topo ===== */
+.topo {
+    text-align: center;
+    padding: 48px 20px 24px;
+}
+
+.etiqueta {
+    font-family: "Pixelify Sans", sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h1 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 3.2rem;
+    margin: 8px 0;
+}
+
+h1 span {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.subtitulo {
+    font-size: 1.15rem;
+    margin-top: 0;
+}
+
+.mensagem-tema {
+    font-style: italic;
+}
+
+/* ===== Botões ===== */
+.botao {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.1rem;
+    padding: 10px 22px;
+    background: #f4a259;
+    color: #3b2412;
+    border: 3px solid #8a4b1f;
+    border-radius: 6px;
+    box-shadow: 0 4px 0 #8a4b1f;
+    cursor: pointer;
+}
+
+.botao:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #8a4b1f;
+}
+
+.botao.pequeno {
+    font-size: 0.95rem;
+    padding: 6px 14px;
+}
+
+/* ===== Caixas das seções (parecem papel de madeira) ===== */
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 16px 40px;
+}
+
+.caixa {
+    background: var(--papel);
+    border: 4px solid var(--borda);
+    border-radius: 10px;
+    padding: 20px 26px;
+    margin-bottom: 26px;
+    box-shadow: 0 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.8rem;
+    color: var(--destaque);
+    margin-top: 0;
+}
+
+img {
+    width: 100%;
+    border: 3px solid var(--borda);
+    border-radius: 6px;
+}
+
+.duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.destaque {
+    font-weight: 700;
+    color: var(--destaque);
+}
+
+/* ===== Lista de habilidades ===== */
+.lista-numeros {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
+}
+
+.lista-numeros strong {
+    display: inline-block;
+    width: 32px;
+    color: var(--destaque);
+}
+
+/* ===== Cartões da família ===== */
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.cartao {
+    border: 3px dashed var(--borda);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+.cartao p {
+    margin: 4px 0;
+}
+
+.cartao-titulo {
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.3rem;
+}
+
+/* ===== Lista de amizades ===== */
+.lista-coracoes {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: 30px;
+}
+
+.lista-coracoes li {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px dotted var(--borda);
+    break-inside: avoid;
+}
+
+.coracoes {
+    color: var(--coracao);
+    letter-spacing: 1px;
+}
+
+/* ===== Jogo ===== */
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.formulario select,
+.formulario input {
+    font-size: 1rem;
+    padding: 8px;
+    border: 2px solid var(--borda);
+    border-radius: 6px;
+}
+
+.formulario input {
+    width: 70px;
+}
+
+.resultado {
+    font-weight: 700;
+    font-size: 1.1rem;
+    min-height: 1.5em;
+}
+
+.resultado.erro {
+    color: #b91c1c;
+}
+
+body.noite .resultado.erro {
+    color: #ff8a8a;
+}
+
+/* ===== Animais ===== */
+.filtros {
+    margin-bottom: 14px;
+}
+
+.grade-animais {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+}
+
+.grade-animais li {
+    border: 2px solid var(--borda);
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+
+.grade-animais .nome-animal {
+    font-weight: 700;
+    display: block;
+}
+
+/* ===== Conquistas ===== */
+.lista-conquistas {
+    list-style: none;
+    padding: 0;
+    line-height: 1.9;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== Celular ===== */
+@media (max-width: 700px) {
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .duas-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .lista-coracoes {
+        columns: 1;
+    }
+}
